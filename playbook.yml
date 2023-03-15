@@ -1,0 +1,14 @@
+---
+- name: Pull docker image of Calculator
+  hosts: all
+  tasks:
+    - name: sudo Start docker service
+      service:
+        name: docker
+        state: started
+        
+    - name: pull docker image
+      shell: docker pull tripathiharsh9/devops_pro:latest
+
+    - name: running container
+      shell: docker run -it -d tripathiharsh9/devops_pro:latest /bin/bash
