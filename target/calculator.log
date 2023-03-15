@@ -1,2 +1,8 @@
-2023-03-15 14:16:36.840 [main] INFO  calculator.Calculator - [SQUARE] - 2.0
-2023-03-15 14:16:36.849 [main] INFO  calculator.Calculator - [RESULT - SQUARE] - 4.0
+2023-03-15 17:22:08.905 [main] INFO  calculator.Calculator - [SQUAREROOT - 81.0
+2023-03-15 17:22:08.915 [main] INFO  calculator.Calculator - [RESULT - SQUAREROOT] - 9.0
+2023-03-15 17:22:15.518 [main] INFO  calculator.Calculator - [LOG] - 16.0
+2023-03-15 17:22:15.520 [main] INFO  calculator.Calculator - [RESULT - LOG] - 2.772588722239781
+2023-03-15 17:22:43.693 [main] INFO  calculator.Calculator - [FACTORIAL] - 6.0
+2023-03-15 17:22:43.695 [main] INFO  calculator.Calculator - [RESULT - FACTORIAL] - 720.0
+2023-03-15 17:22:49.930 [main] INFO  calculator.Calculator - [POWER of5.0 FROM 3.0
+2023-03-15 17:22:49.932 [main] INFO  calculator.Calculator - [RESULT - POWER] - 125.0

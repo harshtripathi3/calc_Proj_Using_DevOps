@@ -17,7 +17,7 @@ public class Calculator {
         double number1, number2;
         do {
             System.out.println("Calculator-using-DevOps, Choose to perform operation");
-            System.out.print("Press 1 to find Multiplication\nPress 2 to find Cube Root\nPress 3 to find Square\nPress 4 to find Subtraction\n" +
+            System.out.print("Press 1 to find Square Root\nPress 2 to find Log\nPress 3 to find Factorial\nPress 4 to find Power\n" +
                     "Press 5 to exit\nEnter your choice: ");
             int choice;
             try {
@@ -29,11 +29,11 @@ public class Calculator {
             switch (choice) {
                 case 1:
                     // do Multiplication
-                    System.out.print("Enter the first number : ");
+                    System.out.print("Enter the number : ");
                     number1 = scanner.nextDouble();
-                    System.out.print("Enter the second number : ");
-                    number2 = scanner.nextDouble();
-                    System.out.println("Multiplication of "+number1+" and "+number2+" is : " + calculator.multiplication(number1,number2));
+//                    System.out.print("Enter the second number : ");
+//                    number2 = scanner.nextDouble();
+                    System.out.println("Square root of "+number1+"  is : " + calculator.squareroot(number1));
                     System.out.println("\n");
 
                     break;
@@ -41,7 +41,7 @@ public class Calculator {
                     // find cube root
                     System.out.print("Enter a number : ");
                     number1 = scanner.nextDouble();
-                    System.out.println("Cube root of "+number1+" is : " + calculator.cuberoot(number1));
+                    System.out.println("Logof "+number1+" is : " + calculator.log(number1));
                     System.out.println("\n");
 
                     break;
@@ -49,7 +49,7 @@ public class Calculator {
                     // find square
                     System.out.print("Enter a number : ");
                     number1 = scanner.nextDouble();
-                    System.out.println("Square of "+number1+" is : " + calculator.square(number1));
+                    System.out.println("Square of "+number1+" is : " + calculator.fac(number1));
                     System.out.println("\n");
 
                     break;
@@ -59,7 +59,7 @@ public class Calculator {
                     number1 = scanner.nextDouble();
                     System.out.print("Enter the second number : ");
                     number2 = scanner.nextDouble();
-                    System.out.println("Subtraction of "+number2+" from "+number1+" is : " + calculator.sub(number1,number2));
+                    System.out.println("POWER of "+number1+" from "+number2+" is : " + calculator.pow(number1,number2));
                     System.out.println("\n");
 
                     break;
@@ -71,31 +71,33 @@ public class Calculator {
     }
 
 
-    public double multiplication(double number1, double number2) {
-        logger.info("[MULTIPLICATION - " + number1 + " AND " + number2);
-        double result = number1 * number2;
-        logger.info("[RESULT - MULTIPLICATION] - " + result);
+    public double squareroot(double number1) {
+        logger.info("[SQUAREROOT - " + number1);
+        double result = Math.sqrt(number1);
+        logger.info("[RESULT - SQUAREROOT] - " + result);
         return result;
     }
 
-    public double cuberoot(double number1) {
-        logger.info("[CUBE ROOT] - " + number1);
-        double result = Math.cbrt(number1);
-        logger.info("[RESULT - CUBE ROOT] - " + result);
+    public double log(double number1) {
+        logger.info("[LOG] - " + number1);
+        double result = Math.log(number1);
+        logger.info("[RESULT - LOG] - " + result);
         return result;
     }
 
-    public double square(double number1) {
-        logger.info("[SQUARE] - " + number1);
-        double result = number1 * number1;
-        logger.info("[RESULT - SQUARE] - " + result);
+    public double fac(double number1) {
+        logger.info("[FACTORIAL] - " + number1);
+        double result=1;
+        for(int i=1;i<=number1;i++)
+            result = result * i;
+        logger.info("[RESULT - FACTORIAL] - " + result);
         return result;
     }
 
-    public double sub(double number1, double number2) {
-        logger.info("[SUBTRACTION - " + number2 + " FROM " + number1);
-        double result = number1 - number2;
-        logger.info("[RESULT - SUBTRACTION] - " + result);
+    public double pow(double number1, double number2) {
+        logger.info("[POWER of" + number1 + " FROM " + number2);
+        double result = Math.pow(number1,number2);
+        logger.info("[RESULT - POWER] - " + result);
         return result;
     }
 
